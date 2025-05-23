@@ -7,7 +7,7 @@ const Textbox = React.forwardRef(
     ref
   ) => {
     return (
-      <div className='w-full flex flex-col gap-1'>
+      <div className='flex flex-col w-full gap-1'>
         {label && (
           <span
             htmlFor={name}
@@ -24,7 +24,7 @@ const Textbox = React.forwardRef(
             placeholder={placeholder}
             ref={ref}
             className={clsx(
-              "bg-transparent px-3 py-2.5 2xl:py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-300 dark:placeholder-gray-700 text-gray-900 dark:text-white outline-none text-base focus:ring-2 ring-blue-300",
+              "bg-transparent px-3 py-2.5 2xl:py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-300 dark:placeholder-gray-700 text-gray-900 dark:text-white outline-none text-base focus:ring-2 ring-purple-300",
               className
             )}
             {...register}

@@ -110,7 +110,7 @@ const AddUser = ({ open, setOpen, userData }) => {
             <select
               id="role"
               {...register("role", { required: "User role is required!" })}
-              className={`w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              className={`w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 ${
                 errors.role ? "border-red-500" : ""
               }`}
               defaultValue={defaultValues.role || "user"}
@@ -134,7 +134,7 @@ const AddUser = ({ open, setOpen, userData }) => {
           <div className='py-3 mt-4 sm:flex sm:flex-row-reverse'>
             <Button
               type='submit'
-              className='px-8 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 sm:w-auto'
+              className='px-8 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 sm:w-auto'
               label='Submit'
             />
 

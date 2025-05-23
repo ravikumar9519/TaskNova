@@ -103,7 +103,7 @@ const Users = () => {
     <tr className='text-gray-600 border-b border-gray-200 hover:bg-gray-400/10'>
       <td className='p-2'>
         <div className='flex items-center gap-3'>
-          <div className='flex items-center justify-center text-sm text-white bg-blue-700 rounded-full w-9 h-9'>
+          <div className='flex items-center justify-center text-sm text-white bg-purple-700 rounded-full w-9 h-9'>
             <span className='text-xs text-center md:text-sm'>
               {getInitials(user.name)}
             </span>
@@ -119,7 +119,7 @@ const Users = () => {
           onClick={() => userStatusClick(user)}
           className={clsx(
             "w-fit px-4 py-1 rounded-full",
-            user?.isActive ? "bg-blue-200" : "bg-yellow-100"
+            user?.isActive ? "bg-purple-200" : "bg-yellow-100"
           )}
         >
           {user?.isActive ? "Active" : "Disabled"}
@@ -127,7 +127,7 @@ const Users = () => {
       </td>
       <td className='flex justify-end gap-4 p-2'>
         <Button
-          className='font-semibold text-blue-600 hover:text-blue-500 sm:px-0'
+          className='font-semibold text-purple-600 hover:text-purple-500 sm:px-0'
           label='Edit'
           type='button'
           onClick={() => editClick(user)}
@@ -156,7 +156,7 @@ const Users = () => {
           <Button
             label='Add New User'
             icon={<IoMdAdd className='text-lg' />}
-            className='flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md 2xl:py-2.5'
+            className='flex flex-row-reverse gap-1 items-center bg-purple-600 text-white rounded-md 2xl:py-2.5'
             onClick={() => setOpen(true)}
           />
         </div>

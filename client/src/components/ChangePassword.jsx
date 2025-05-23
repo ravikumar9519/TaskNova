@@ -41,11 +41,11 @@ const ChangePassword = ({ open, setOpen }) => {
         <form onSubmit={handleSubmit(handleOnSubmit)} className=''>
           <Dialog.Title
             as='h2'
-            className='text-base font-bold leading-6 text-gray-900 mb-4'
+            className='mb-4 text-base font-bold leading-6 text-gray-900'
           >
             Change Passowrd
           </Dialog.Title>
-          <div className='mt-2 flex flex-col gap-6'>
+          <div className='flex flex-col gap-6 mt-2'>
             <Textbox
               placeholder='New Passowrd'
               type='password'
@@ -78,13 +78,13 @@ const ChangePassword = ({ open, setOpen }) => {
             <div className='py-3 mt-4 sm:flex sm:flex-row-reverse'>
               <Button
                 type='submit'
-                className='bg-blue-600 px-8 text-sm font-semibold text-white hover:bg-blue-700  sm:w-auto'
+                className='px-8 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 sm:w-auto'
                 label='Save'
               />
 
               <button
                 type='button'
-                className='bg-white px-5 text-sm font-semibold text-gray-900 sm:w-auto'
+                className='px-5 text-sm font-semibold text-gray-900 bg-white sm:w-auto'
                 onClick={() => setOpen(false)}
               >
                 Cancel

@@ -64,7 +64,7 @@ export const postApiSlice = apiSlice.injectEndpoints({
       }),
     }),
 
-    trashTast: builder.mutation({
+    trashTest: builder.mutation({
       query: ({ id }) => ({
         url: `${TASKS_URL}/${id}`,
         method: "PUT",

@@ -60,7 +60,7 @@ const ChangeTaskActions = ({ _id, stage }) => {
     {
       label: "To-Do",
       stage: "todo",
-      icon: <TaskColor className='bg-blue-600' />,
+      icon: <TaskColor className='bg-purple-600' />,
       onClick: () => changeHanlder("todo"),
     },
     {
@@ -208,7 +208,7 @@ export default function TaskDialog({ task }) {
                         disabled={index === 0 ? false : !user.isAdmin}
                         onClick={el?.onClick}
                         className={`${
-                          active ? "bg-blue-500 text-white" : "text-gray-900"
+                          active ? "bg-purple-500 text-white" : "text-gray-900"
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm disabled:text-gray-400`}
                       >
                         {el.icon}

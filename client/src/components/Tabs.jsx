@@ -8,7 +8,7 @@ export default function Tabs({ tabs, setSelected, children }) {
   return (
     <div className='w-full px-1 sm:px-0'>
       <Tab.Group>
-        <Tab.List className='flex space-x-6 rounded-xl p-1'>
+        <Tab.List className='flex p-1 space-x-6 rounded-xl'>
           {tabs.map((tab, index) => (
             <Tab
               key={tab.title}
@@ -18,8 +18,8 @@ export default function Tabs({ tabs, setSelected, children }) {
                   "w-fit flex items-center outline-none gap-2 px-3 py-2.5 text-base font-medium leading-5 bg-white dark:bg-[#1f1f1f]",
 
                   selected
-                    ? "text-blue-700 dark:text-white border-b-2 border-blue-600"
-                    : "text-gray-800 dark:text-gray-500 hover:text-blue-800"
+                    ? "text-purple-700 dark:text-white border-b-2 border-purple-600"
+                    : "text-gray-800 dark:text-gray-500 hover:text-purple-800"
                 )
               }
             >

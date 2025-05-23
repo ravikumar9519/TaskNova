@@ -124,7 +124,7 @@ const Table = ({ tasks }) => {
 
       <td className='flex justify-end gap-2 py-2 md:gap-4'>
         <Button
-          className='text-sm text-blue-600 hover:text-blue-500 sm:px-0 md:text-base'
+          className='text-sm text-purple-600 hover:text-purple-500 sm:px-0 md:text-base'
           label='Edit'
           type='button'
           onClick={() => editClickHandler(task)}

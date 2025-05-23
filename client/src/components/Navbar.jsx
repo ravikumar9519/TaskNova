@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className=''>
           <button
             onClick={() => dispatch(setOpenSidebar(true))}
-            className='text-2xl text-gray-500 block md:hidden'
+            className='block text-2xl text-gray-500 md:hidden'
           >
             ☰
           </button>
@@ -42,20 +42,20 @@ const Navbar = () => {
             onSubmit={handleSubmit}
             className='w-64 2xl:w-[400px] flex items-center py-2 px-3 gap-2 rounded-full bg-[#f3f4f6] dark:bg-[#1c1c1c]'
           >
-            <MdOutlineSearch className='text-gray-500 text-xl' />
+            <MdOutlineSearch className='text-xl text-gray-500' />
 
             <input
               onChange={(e) => setSearchTerm(e.target.value)}
               value={searchTerm}
               type='text'
               placeholder='Search...'
-              className='flex-1 outline-none bg-transparent placeholder:text-gray-500 text-gray-800'
+              className='flex-1 text-gray-800 bg-transparent outline-none placeholder:text-gray-500'
             />
           </form>
         )}
       </div>
 
-      <div className='flex gap-2 items-center'>
+      <div className='flex items-center gap-2'>
         <NotificationPanel />
 
         <UserAvatar />

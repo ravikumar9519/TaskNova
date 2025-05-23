@@ -132,11 +132,11 @@ const AddTask = ({ open, setOpen, task }) => {
         <form onSubmit={handleSubmit(handleOnSubmit)} className=''>
           <Dialog.Title
             as='h2'
-            className='text-base font-bold leading-6 text-gray-900 mb-4'
+            className='mb-4 text-base font-bold leading-6 text-gray-900'
           >
             {task ? "UPDATE TASK" : "ADD TASK"}
           </Dialog.Title>
-          <div className='mt-2 flex flex-col gap-6'>
+          <div className='flex flex-col gap-6 mt-2'>
             <Textbox
               placeholder='Task title'
               type='text'
@@ -178,9 +178,9 @@ const AddTask = ({ open, setOpen, task }) => {
                   error={errors.date ? errors.date.message : ""}
                 />
               </div>
-              <div className='w-full flex items-center justify-center mt-4'>
+              <div className='flex items-center justify-center w-full mt-4'>
                 <label
-                  className='flex items-center gap-1 text-base text-ascent-2 hover:text-ascent-1 cursor-pointer my-4'
+                  className='flex items-center gap-1 my-4 text-base cursor-pointer text-ascent-2 hover:text-ascent-1'
                   htmlFor='imgUpload'
                 >
                   <input
@@ -203,16 +203,16 @@ const AddTask = ({ open, setOpen, task }) => {
               <Loading />
             </div>
           ) : (
-            <div className='bg-gray-50 py-6 sm:flex sm:flex-row-reverse gap-4'>
+            <div className='gap-4 py-6 bg-gray-50 sm:flex sm:flex-row-reverse'>
               <Button
                 label='Submit'
                 type='submit'
-                className='bg-blue-600 px-8 text-sm font-semibold text-white hover:bg-blue-700  sm:w-auto'
+                className='px-8 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 sm:w-auto'
               />
 
               <Button
                 type='button'
-                className='bg-white px-5 text-sm font-semibold text-gray-900 sm:w-auto'
+                className='px-5 text-sm font-semibold text-gray-900 bg-white sm:w-auto'
                 onClick={() => setOpen(false)}
                 label='Cancel'
               />

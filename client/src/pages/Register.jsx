@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useRegisterMutation } from "../redux/slices/api/authApiSlice";
 import { setCredentials } from "../redux/slices/authSlice";
@@ -18,7 +18,6 @@ const Register = () => {
   const [registerUser, { isLoading }] = useRegisterMutation();
 
   const handleRegister = async (data) => {
-    // Convert role to isAdmin boolean
     const modifiedData = {
       ...data,
       isAdmin: data.role === "admin",
@@ -37,12 +36,13 @@ const Register = () => {
   return (
     <div className='w-full min-h-screen flex items-center justify-center flex-col lg:flex-row bg-[#f3f4f6] dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#302943] via-slate-900 to-black'>
       <div className='flex flex-col items-center justify-center w-full gap-0 md:w-auto md:gap-40 md:flex-row'>
+        {/* Left side banner */}
         <div className='flex flex-col items-center justify-center w-full h-full lg:w-2/3'>
           <div className='flex flex-col items-center justify-center w-full gap-5 md:max-w-lg 2xl:max-w-3xl md:gap-y-10 2xl:-mt-20'>
-            <span className='flex gap-1 px-3 py-1 text-sm text-gray-600 border border-gray-300 rounded-full md:text-base dark:border-gray-700 dark:text-blue-400'>
+            <span className='flex gap-1 px-3 py-1 text-sm text-gray-900 border border-purple-700 rounded-full md:text-base dark:border-gray-700 dark:text-purple-600'>
               Join us and manage your tasks efficiently!
             </span>
-            <p className='flex flex-col gap-0 text-4xl font-black text-center text-blue-700 md:gap-4 md:text-6xl 2xl:text-7xl dark:text-gray-400'>
+            <p className='flex flex-col gap-0 text-4xl font-black text-center text-purple-800 md:gap-4 md:text-6xl 2xl:text-7xl dark:text-gray-400'>
               <span>Start Your</span>
               <span>Task Journey</span>
             </p>
@@ -52,13 +52,14 @@ const Register = () => {
           </div>
         </div>
 
+        {/* Register form */}
         <div className='flex flex-col items-center justify-center w-full p-4 md:w-1/3 md:p-1'>
           <form
             onSubmit={handleSubmit(handleRegister)}
-            className='form-container w-full md:w-[400px] flex flex-col gap-y-8 bg-white dark:bg-slate-900 px-10 pt-14 pb-14'
+            className='form-container w-full md:w-[400px] flex flex-col gap-y-6 bg-white dark:bg-slate-900 px-10 py-10 rounded-xl shadow-lg'
           >
             <div>
-              <p className='text-3xl font-bold text-center text-blue-600'>
+              <p className='text-3xl font-bold text-center text-purple-800'>
                 Create your account
               </p>
               <p className='text-base text-center text-gray-700 dark:text-gray-500'>
@@ -117,7 +118,7 @@ const Register = () => {
                 </label>
                 <select
                   {...register("role", { required: "Role is required!" })}
-                  className='w-full p-2 text-gray-700 bg-white border border-gray-300 rounded-full dark:bg-slate-800 dark:text-white dark:border-gray-600'
+                  className='w-full p-2 text-gray-700 bg-white border border-purple-700 rounded-full dark:bg-slate-800 dark:text-white dark:border-purple-600'
                 >
                   <option value=''>Select role</option>
                   <option value='user'>User</option>
@@ -137,9 +138,20 @@ const Register = () => {
               <Button
                 type='submit'
                 label='Register'
-                className='w-full h-10 text-white bg-blue-700 rounded-full'
+                className='w-full h-10 text-white bg-purple-700 rounded-full'
               />
             )}
+
+            {/* Already have account */}
+            <p className='text-sm text-center text-gray-600 dark:text-gray-400'>
+              Already have an account?{" "}
+              <Link
+                to='/login'
+                className='font-medium text-purple-700 hover:underline dark:text-purple-400'
+              >
+                Login here
+              </Link>
+            </p>
           </form>
         </div>
       </div>

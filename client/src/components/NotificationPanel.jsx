@@ -13,10 +13,10 @@ import ViewNotification from "./ViewNotification";
 
 const ICONS = {
   alert: (
-    <HiBellAlert className='h-5 w-5 text-gray-600 group-hover:text-indigo-600' />
+    <HiBellAlert className='w-5 h-5 text-gray-600 group-hover:text-indigo-600' />
   ),
   message: (
-    <BiSolidMessageRounded className='h-5 w-5 text-gray-600 group-hover:text-indigo-600' />
+    <BiSolidMessageRounded className='w-5 h-5 text-gray-600 group-hover:text-indigo-600' />
   ),
 };
 
@@ -53,10 +53,10 @@ export default function NotificationPanel() {
     <>
       <Popover className='relative'>
         <Popover.Button className='inline-flex items-center outline-none'>
-          <div className='w-8 h-8 flex items-center justify-center text-gray-800 dark:text-white  relative'>
+          <div className='relative flex items-center justify-center w-8 h-8 text-gray-800 dark:text-white'>
             <IoIosNotificationsOutline className='text-2xl' />
             {data?.length > 0 && (
-              <span className='absolute text-center top-0 right-1 text-sm text-white font-semibold w-4 h-4 rounded-full bg-red-600'>
+              <span className='absolute top-0 w-4 h-4 text-sm font-semibold text-center text-white bg-red-600 rounded-full right-1'>
                 {data?.length}
               </span>
             )}
@@ -72,7 +72,7 @@ export default function NotificationPanel() {
           leaveFrom='opacity-100 translate-y-0'
           leaveTo='opacity-0 translate-y-1'
         >
-          <Popover.Panel className='absolute -right-16 md:-right-2 z-10 mt-5 flex w-screen max-w-max  px-4'>
+          <Popover.Panel className='absolute z-10 flex w-screen px-4 mt-5 -right-16 md:-right-2 max-w-max'>
             {({ close }) =>
               data?.length > 0 && (
                 <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white dark:bg-[#1f1f1f] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5'>
@@ -82,7 +82,7 @@ export default function NotificationPanel() {
                         key={item._id + index}
                         className='group relative flex gap-x-4 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-[#1c1c1c]'
                       >
-                        <div className='mt-1 h-8 w-8 flex items-center justify-center rounded-lg bg-gray-200 group-hover:bg-white'>
+                        <div className='flex items-center justify-center w-8 h-8 mt-1 bg-gray-200 rounded-lg group-hover:bg-white'>
                           {ICONS[item.notiType]}
                         </div>
 
@@ -96,7 +96,7 @@ export default function NotificationPanel() {
                               {moment(item.createdAt).fromNow()}
                             </span>
                           </div>
-                          <p className='line-clamp-1 mt-1 text-gray-600 dark:text-gray-500'>
+                          <p className='mt-1 text-gray-600 line-clamp-1 dark:text-gray-500'>
                             {item.text}
                           </p>
                         </div>
@@ -111,7 +111,7 @@ export default function NotificationPanel() {
                         onClick={
                           item?.onClick ? () => item.onClick() : () => close()
                         }
-                        className='flex items-center justify-center gap-x-2.5 p-3 font-semibold text-blue-600 hover:bg-gray-100 dark:hover:bg-[#1c1c1c]'
+                        className='flex items-center justify-center gap-x-2.5 p-3 font-semibold text-purple-600 hover:bg-gray-100 dark:hover:bg-[#1c1c1c]'
                       >
                         {item.name}
                       </Link>
