@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001","https://teamTaskNova.netlify.app"],
+    origin: ["http://localhost:3000", "http://localhost:3001","https://task-nova-ravi.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
