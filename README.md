@@ -36,8 +36,8 @@ With the increasing prevalence of remote work, having a robust, easy-to-use task
 
 ### 👑 Admin Features
 - **Access Management**
-  - role based access and management of tasks and users.
-  - admin can perform crud operation on both tasks and users.
+  - Role based access and management of tasks and users.
+  - Admin can perform crud operation on both tasks and users.
 - **User Management**
   - Create, update, and delete users.
   - Promote users to admin or restrict access.
